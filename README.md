@@ -1,24 +1,41 @@
-# README
+# DB 設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users table
 
-Things you may want to cover:
+| Column             | Type        | Options                      |
+|--------------------|-------------|------------------------------|
+| id                 | string      | null: false                  |
+| encrypted_password | string      | null: false                  |
+| last_name          | string      | null: false                  |
+| first_name         | string      | null: false                  |
+| birth              | date        | null: false                  |
 
-* Ruby version
+### Association
 
-* System dependencies
+* has_one :reservation
+* has_many :windows
 
-* Configuration
+## reservations table
 
-* Database creation
+| Column           | Type        | Options                         |
+|------------------|-------------|---------------------------------|
+| reservation_time | datetime    | null: false                     |
+| ontime           | timestamp   | null: false                     |
+| user             | references  | null: false,foreign_key: true   |
 
-* Database initialization
+### Association
 
-* How to run the test suite
+- belongs_to :user
+- has_one :window
 
-* Services (job queues, cache servers, search engines, etc.)
+## windows table
 
-* Deployment instructions
+| Column      | Type         | Options                          |
+|-------------|--------------|----------------------------------|
+| user        | references   | null: false,foreign_key: true    |
+| reservation        | references   | null: false,foreign_key: true    |
 
-* ...
+### Association
+
+- belongs_to :user
+- has_many   :reservations
