@@ -1,6 +1,34 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Reservations</h1>
+<div class='main'>
+
+  <div class='title-contents'>
+    <h2 class='service-title'>
+      市役所簡単予約
+    </h2>
+    <p class='service-explain'>
+      だれでもかんたんに予約できるWebサイト
+    </p>
+    <p class='service-explain'>
+      
+    </p>
+  </div>
+<div>
+
+<h1>予約フォーム</h1>
+
+<%= link_to '新規予約', new_reservation_path %>
+
+<%= month_calendar events: @reservations do |date, reservations| %>
+  <%= date %>
+
+  <% reservations.each do |reservation| %>
+    <div>
+      <%= reservation.start_time.hour %>:<%= reservation.start_time.min %>
+      <%= reservation.name %>
+    </div>
+  <% end %>
+<% end %>
 
 <table>
   <thead>
@@ -15,26 +43,10 @@
     <% @reservations.each do |reservation| %>
       <tr>
         <td><%= reservation.name %></td>
-        <td><%= reservation.start_time %></td>
+        <td><%= reservation.start_time.strftime("%Y-%m-%d %H:%M") %></td>
         <td><%= link_to '確認', reservation %></td>
         <td><%= link_to '編集', edit_reservation_path(reservation) %></td>
         <td><%= link_to '削除', reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
-</table>
-
-<br>
-
-<%= month_calendar events: @reservations do |date, reservations| %>
-  <%= date %>
-
-  <% reservations.each do |reservation| %>
-    <div>
-      <%= reservation.start_time.hour %>:<%= reservation.start_time.min %>
-      <%= reservation.name %>
-    </div>
-  <% end %>
-<% end %>
-
-<%= link_to 'New Reservation', new_reservation_path %>
