@@ -6,15 +6,14 @@ class Reservation < ApplicationRecord
   validates :start_time, uniqueness: { message: 'は他のユーザーが予約しています' }
 
   def date_before_start
-    errors.add(:start_time, "は過去の日付を選択できません") if start_time < Date.today
+    errors.add(:start_time, 'は過去の日付を選択できません') if start_time < Date.today
   end
 
   def start_time_not_sunday
-    errors.add(:start_time, "は日曜日を選択できません") if start_time.sunday?
+    errors.add(:start_time, 'は日曜日を選択できません') if start_time.sunday?
   end
 
   def start_time_not_saturday
-    errors.add(:start_time, "は土曜日を選択できません") if start_time.saturday?
+    errors.add(:start_time, 'は土曜日を選択できません') if start_time.saturday?
   end
-
 end
