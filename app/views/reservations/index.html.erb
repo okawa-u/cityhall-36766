@@ -1,30 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Reservations</h1>
+<div class='main'>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Start time</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <div class='title-contents'>
+    <h2 class='service-title'>
+      市役所簡単予約
+    </h2>
+    <p class='service-explain'>
+      だれでもかんたんに予約できるWebサイト
+    </p>
+    <p class='service-explain'>
+      
+    </p>
+  </div>
+<div>
 
-  <tbody>
-    <% @reservations.each do |reservation| %>
-      <tr>
-        <td><%= reservation.name %></td>
-        <td><%= reservation.start_time %></td>
-        <td><%= link_to 'Show', reservation %></td>
-        <td><%= link_to 'Edit', edit_reservation_path(reservation) %></td>
-        <td><%= link_to 'Destroy', reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<h1>予約フォーム</h1>
 
-<br>
+<%= link_to '新規予約', new_reservation_path %>
 
 <%= month_calendar events: @reservations do |date, reservations| %>
   <%= date %>
@@ -37,4 +30,23 @@
   <% end %>
 <% end %>
 
-<%= link_to 'New Reservation', new_reservation_path %>
+<table>
+  <thead>
+    <tr>
+      <th>名前</th>
+      <th>予約時間</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reservations.each do |reservation| %>
+      <tr>
+        <td><%= reservation.name %></td>
+        <td><%= reservation.start_time.strftime("%Y-%m-%d %H:%M") %></td>
+        <td><%= link_to '確認', reservation %></td>
+        <td><%= link_to '編集', edit_reservation_path(reservation) %></td>
+        <td><%= link_to '削除', reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
