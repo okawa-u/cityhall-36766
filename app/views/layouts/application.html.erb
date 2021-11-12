@@ -9,10 +9,6 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <body>
-      <%= yield %>
-    </body>
-
-    <body>
       <script src="https://maps.google.com/maps/api/js?key=AIzaSyDJxtipsWokzn_GVY329Mt_phwADYdrQ0Y&language=ja"></script>
   
       <style>
@@ -33,6 +29,11 @@
        var map = new google.maps.Map(document.getElementById('map'), Options);
        </script>
     </body> 
+
+
+    <body>
+      <%= yield %>
+    </body>
 
   </head>
 
