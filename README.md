@@ -8,4 +8,8 @@
   https://cityhall-36766.herokuapp.com/
 
 ### 利用方法
+  新規予約ボタンから名前・予約時間を登録
+  Google Mapから市役所までの時間を計測
+
+### 目指した課題解決
   
