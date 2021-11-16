@@ -1,7 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <div class='main'>
-
   <div class='title-contents'>
     <h2 class='service-title'>
       市役所簡単予約
@@ -50,23 +49,10 @@
       </tr>
     <% end %>
   </tbody>
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-<meta charset="UTF-8">
-<title>Sample_GoogleMap</title>
 
 <script src="https://maps.google.com/maps/api/js?key=AIzaSyDJxtipsWokzn_GVY329Mt_phwADYdrQ0Y&language=ja"></script>
+<div id="map"></div>
 
-<style>
-html { height: 50% }
-body { height: 100% }
-#map { height: 100%; width: 100%}
-</style>
-</head>
-
-<body>
 <script>
 var MyLatLng = new google.maps.LatLng(34.989890441838625, 137.00215406658705);
 var Options = {
@@ -77,5 +63,8 @@ var Options = {
 var map = new google.maps.Map(document.getElementById('map'), Options);
 </script>
 
-</body>
-</html>
+<style>
+html { height: 50% }
+body { height: 100% }
+#map { height: 500px ; width: 100%}
+</style>
