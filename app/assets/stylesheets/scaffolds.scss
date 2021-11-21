@@ -83,92 +83,93 @@ label {
   display: block;
 }
 
-html,
-body,
-h1,
-h2,
-p,
-ul,
-li {
-  margin: 0;
-  padding: 0;
-  line-height: 1.0;
-}
+// リセットCSS
+// html,
+// body,
+// h1,
+// h2,
+// p,
+// ul,
+// li {
+//   margin: 0;
+//   padding: 0;
+//   line-height: 1.0;
+// }
 
-ul {
-  list-style: none;
-}
+// ul {
+//   list-style: none;
+// }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+// a {
+//   text-decoration: none;
+//   color: inherit;
+// }
 
-img {
-  border: none;
-  vertical-align: bottom;
-  max-width: 100%;
-}
+// img {
+//   border: none;
+//   vertical-align: bottom;
+//   max-width: 100%;
+// }
 
-html {
-  font-size: 62.5%;
-}
+// html {
+//   font-size: 62.5%;
+// }
 
-body {
-  background: #fff;
-  color: #333;
-  font-size: 1.6rem;
-  font-family:"游ゴシック",YuGothic,"Hiragino Kaku Gothic ProN",Meiryo, sans-serif;
-}
+// body {
+//   background: #fff;
+//   color: #333;
+//   font-size: 1.6rem;
+//   font-family:"游ゴシック",YuGothic,"Hiragino Kaku Gothic ProN",Meiryo, sans-serif;
+// }
 
-html,
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul,
-li,
-dl,
-dt,
-dd {
-  margin: 0;
-  padding: 0;
-  line-height: 1.0;
-}
+// html,
+// body,
+// h1,
+// h2,
+// h3,
+// h4,
+// p,
+// ul,
+// li,
+// dl,
+// dt,
+// dd {
+//   margin: 0;
+//   padding: 0;
+//   line-height: 1.0;
+// }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
+// table {
+//   border-collapse: collapse;
+//   border-spacing: 0;
+// }
 
-input,
-button,
-select,
-textarea {
-  appearance: none;
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  font: inherit;
-  outline: none;
-}
+// input,
+// button,
+// select,
+// textarea {
+//   appearance: none;
+//   background: transparent;
+//   border: none;
+//   border-radius: 0;
+//   font: inherit;
+//   outline: none;
+// }
 
-textarea {
-  resize: vertical;
-}
+// textarea {
+//   resize: vertical;
+// }
 
-/* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-       #map {
-        height: 100%;
-      }
+// /* Always set the map height explicitly to define the size of the div
+//        * element that contains the map. */
+//        #map {
+//         height: 100%;
+//       }
       
-      /* Optional: Makes the sample page fill the window. */
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
+//       /* Optional: Makes the sample page fill the window. */
+//       html,
+//       body {
+//         height: 100%;
+//         margin: 0;
+//         padding: 0;
+//       }
