@@ -61,6 +61,11 @@ var Options = {
  mapTypeId: 'roadmap'   //地図の種類
 };
 var map = new google.maps.Map(document.getElementById('map'), Options);
+var marker_options = {
+    position: centerPosition,
+    map: myMap,
+};
+var myMarker = new google.maps.Marker(marker_options);
 </script>
 
 <style>
