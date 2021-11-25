@@ -8,7 +8,9 @@
   https://cityhall-36766.herokuapp.com/
 
 ### アカウント名
-  ID : admin  PASS : 2222
+  ID : admin
+  
+  PASS : 2222
 
 ### 利用方法
   新規予約ボタンから名前・予約時間を登録
